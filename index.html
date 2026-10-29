@@ -1,0 +1,1531 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pour toi, Andompitia Lahatry Ny Avo Alida ❤</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Playfair+Display:ital,wght@0,500;1,500&family=Poppins:wght@200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============ BASE ============ */
+      :root {
+        --rose: #ff4d79;
+        --rose-d: #c9184a;
+        --pink: #ffb3c6;
+        --gold: #ffd28f;
+        --cream: #fff6f2;
+        --nuit: #1a0512;
+        --nuit2: #2d0a1f;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--nuit);
+        color: var(--cream);
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+      /* Fond animé aurora */
+      .bg {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background:
+          radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 77, 121, 0.28),
+            transparent 55%
+          ),
+          radial-gradient(
+            circle at 80% 30%,
+            rgba(255, 179, 0, 0.18),
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 50% 80%,
+            rgba(201, 24, 74, 0.3),
+            transparent 60%
+          ),
+          linear-gradient(160deg, #1a0512 0%, #2d0a1f 40%, #12030c 100%);
+        animation: bgPulse 14s ease-in-out infinite alternate;
+      }
+      @keyframes bgPulse {
+        0% {
+          filter: hue-rotate(0deg) brightness(1);
+        }
+        100% {
+          filter: hue-rotate(-14deg) brightness(1.15);
+        }
+      }
+      .bg::after {
+        content: "";
+        position: absolute;
+        inset: -20%;
+        background:
+          radial-gradient(closest-side, rgba(255, 255, 255, 0.08), transparent)
+            10% 30%/40vmax 40vmax no-repeat,
+          radial-gradient(closest-side, rgba(255, 77, 121, 0.12), transparent)
+            70% 70%/45vmax 45vmax no-repeat;
+        animation: drift 26s linear infinite alternate;
+      }
+      @keyframes drift {
+        from {
+          transform: translate3d(-4%, -3%, 0) scale(1);
+        }
+        to {
+          transform: translate3d(5%, 4%, 0) scale(1.15);
+        }
+      }
+      #coeurs {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
+      .contenu {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* ============ INTRO / ENVELOPPE ============ */
+      #intro {
+        position: fixed;
+        inset: 0;
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        background: radial-gradient(circle at 50% 45%, #3a0c26, #150310 70%);
+        transition:
+          opacity 1.1s ease,
+          transform 1.1s ease;
+      }
+      #intro.ferme {
+        opacity: 0;
+        transform: scale(1.25);
+        pointer-events: none;
+      }
+      .env {
+        width: 230px;
+        height: 150px;
+        position: relative;
+        cursor: pointer;
+        animation: flotte 3.4s ease-in-out infinite;
+        filter: drop-shadow(0 18px 34px rgba(255, 77, 121, 0.45));
+      }
+      @keyframes flotte {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-1deg);
+        }
+        50% {
+          transform: translateY(-14px) rotate(1deg);
+        }
+      }
+      .env .corps {
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        background: linear-gradient(145deg, #fff1e6, #ffc9d6);
+        box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+      }
+      .env .rabat {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 52%;
+        background: linear-gradient(160deg, #ffd9e3, #ff97b3);
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        transform-origin: top;
+        transition: transform 0.9s cubic-bezier(0.5, -0.4, 0.3, 1.4);
+        border-radius: 12px 12px 0 0;
+      }
+      .env.ouvert .rabat {
+        transform: rotateX(180deg);
+      }
+      .env .sceau {
+        position: absolute;
+        left: 50%;
+        top: 52%;
+        transform: translate(-50%, -50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #ff6b8f, #c9184a);
+        display: grid;
+        place-items: center;
+        font-size: 26px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+        animation: bat 1.1s ease-in-out infinite;
+        z-index: 3;
+      }
+      @keyframes bat {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        14% {
+          transform: translate(-50%, -50%) scale(1.22);
+        }
+        28% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        42% {
+          transform: translate(-50%, -50%) scale(1.16);
+        }
+        70% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+      .lettre {
+        position: absolute;
+        left: 8%;
+        right: 8%;
+        top: 6px;
+        height: 88%;
+        background: #fffaf3;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        transition:
+          transform 0.9s ease 0.25s,
+          opacity 0.6s;
+        display: grid;
+        place-items: center;
+        padding: 10px;
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        color: var(--rose-d);
+        font-size: 19px;
+        line-height: 1.25;
+      }
+      .env.ouvert .lettre {
+        transform: translateY(-118px);
+      }
+      .txt-intro {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(26px, 5vw, 42px);
+        text-align: center;
+        color: var(--cream);
+        text-shadow: 0 0 24px rgba(255, 77, 121, 0.7);
+        animation: brille 2.6s ease-in-out infinite;
+      }
+      @keyframes brille {
+        0%,
+        100% {
+          opacity: 0.85;
+        }
+        50% {
+          opacity: 1;
+          text-shadow: 0 0 34px rgba(255, 210, 143, 0.9);
+        }
+      }
+      .indice {
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        opacity: 0.75;
+        animation: clignote 1.8s infinite;
+      }
+      @keyframes clignote {
+        0%,
+        100% {
+          opacity: 0.35;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      /* ============ SECTIONS ============ */
+      section {
+        padding: min(14vh, 110px) 20px;
+        max-width: 1080px;
+        margin: auto;
+        position: relative;
+      }
+      .titre {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(30px, 6vw, 58px);
+        text-align: center;
+        margin-bottom: 14px;
+        background: linear-gradient(
+          90deg,
+          var(--gold),
+          var(--pink),
+          #fff,
+          var(--pink),
+          var(--gold)
+        );
+        background-size: 300% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: shine 6s linear infinite;
+      }
+      @keyframes shine {
+        0% {
+          background-position: 0% 0;
+        }
+        100% {
+          background-position: 300% 0;
+        }
+      }
+      .sous-titre {
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(20px, 4vw, 30px);
+        color: var(--pink);
+        margin-bottom: 40px;
+        opacity: 0.95;
+      }
+      .revele {
+        opacity: 0;
+        transform: translateY(46px) scale(0.97);
+        transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .revele.vu {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* HERO */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .couronne {
+        font-size: 44px;
+        animation: flotte 3s ease-in-out infinite;
+      }
+      #hero h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(38px, 9vw, 96px);
+        line-height: 1.05;
+        margin: 18px 0 6px;
+        background: linear-gradient(
+          180deg,
+          #fff 10%,
+          var(--pink) 55%,
+          var(--rose) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        filter: drop-shadow(0 0 26px rgba(255, 77, 121, 0.65));
+        animation: bat2 2.4s ease-in-out infinite;
+      }
+      @keyframes bat2 {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        12% {
+          transform: scale(1.045);
+        }
+        24% {
+          transform: scale(1);
+        }
+        36% {
+          transform: scale(1.03);
+        }
+      }
+      .tiako {
+        font-size: clamp(16px, 3vw, 24px);
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: var(--gold);
+        opacity: 0.9;
+      }
+      .traduction {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(18px, 3.4vw, 26px);
+        color: var(--pink);
+        margin-top: 8px;
+      }
+      .defilement {
+        margin-top: 60px;
+        font-size: 12px;
+        letter-spacing: 4px;
+        opacity: 0.7;
+        animation: descend 2s ease-in-out infinite;
+      }
+      @keyframes descend {
+        0%,
+        100% {
+          transform: translateY(0);
+          opacity: 0.4;
+        }
+        50% {
+          transform: translateY(12px);
+          opacity: 1;
+        }
+      }
+
+      /* LETTRE */
+      .lettre-box {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 179, 198, 0.28);
+        border-radius: 20px;
+        padding: clamp(24px, 4vw, 48px);
+        max-width: 760px;
+        margin: auto;
+        font-size: clamp(15px, 2.6vw, 18px);
+        line-height: 2;
+        font-weight: 300;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        position: relative;
+        overflow: hidden;
+      }
+      .lettre-box::before {
+        content: "";
+        position: absolute;
+        top: -60%;
+        left: -30%;
+        width: 80%;
+        height: 220%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.14),
+          transparent
+        );
+        transform: rotate(18deg);
+        animation: balayage 5s ease-in-out infinite;
+      }
+      @keyframes balayage {
+        0% {
+          left: -40%;
+        }
+        55%,
+        100% {
+          left: 130%;
+        }
+      }
+      .lettre-box p {
+        margin-bottom: 14px;
+        min-height: 1.6em;
+      }
+      .curseur {
+        display: inline-block;
+        width: 2px;
+        height: 1.1em;
+        background: var(--rose);
+        vertical-align: -2px;
+        animation: clignote 0.8s steps(1) infinite;
+      }
+      .signature {
+        font-family: "Dancing Script", cursive;
+        font-size: 26px;
+        color: var(--gold);
+        text-align: right;
+        margin-top: 20px;
+      }
+
+      /* RAISONS */
+      .grille {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 22px;
+      }
+      .carte {
+        background: linear-gradient(
+          160deg,
+          rgba(255, 255, 255, 0.09),
+          rgba(255, 77, 121, 0.1)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 18px;
+        padding: 28px 22px;
+        text-align: center;
+        transition:
+          transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+          box-shadow 0.5s,
+          background 0.5s;
+        position: relative;
+        overflow: hidden;
+      }
+      .carte:nth-child(even) {
+        transform: translateY(18px);
+      }
+      .carte:hover {
+        transform: translateY(-12px) rotate(-1.5deg) scale(1.04);
+        box-shadow: 0 26px 50px rgba(255, 77, 121, 0.35);
+        background: linear-gradient(
+          160deg,
+          rgba(255, 255, 255, 0.16),
+          rgba(255, 77, 121, 0.22)
+        );
+      }
+      .carte .ico {
+        font-size: 40px;
+        display: block;
+        margin-bottom: 12px;
+        animation: flotte 3s ease-in-out infinite;
+      }
+      .carte h3 {
+        font-family: "Dancing Script", cursive;
+        font-size: 26px;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+      .carte p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.75;
+        opacity: 0.92;
+      }
+      .carte .num {
+        position: absolute;
+        top: 8px;
+        right: 14px;
+        font-size: 46px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.06);
+      }
+
+      /* CHIFFRES */
+      .compteurs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
+        text-align: center;
+      }
+      .compteur {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 210, 143, 0.25);
+        border-radius: 16px;
+        padding: 26px 14px;
+        transition: 0.4s;
+      }
+      .compteur:hover {
+        transform: scale(1.06);
+        border-color: var(--rose);
+        box-shadow: 0 0 32px rgba(255, 77, 121, 0.4);
+      }
+      .compteur .n {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(30px, 6vw, 46px);
+        color: var(--gold);
+        text-shadow: 0 0 20px rgba(255, 210, 143, 0.55);
+      }
+      .compteur .l {
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0.75;
+        margin-top: 6px;
+      }
+
+      /* TIMELINE */
+      .timeline {
+        position: relative;
+        padding-left: 34px;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          var(--rose),
+          var(--gold),
+          transparent
+        );
+      }
+      .event {
+        position: relative;
+        margin-bottom: 38px;
+      }
+      .event::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--rose);
+        box-shadow:
+          0 0 0 5px rgba(255, 77, 121, 0.2),
+          0 0 22px var(--rose);
+        animation: pulse 2s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow:
+            0 0 0 5px rgba(255, 77, 121, 0.2),
+            0 0 18px var(--rose);
+        }
+        50% {
+          box-shadow:
+            0 0 0 12px rgba(255, 77, 121, 0.05),
+            0 0 34px var(--rose);
+        }
+      }
+      .event h4 {
+        font-family: "Dancing Script", cursive;
+        font-size: 27px;
+        color: var(--pink);
+      }
+      .event p {
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0.85;
+        line-height: 1.8;
+        margin-top: 4px;
+      }
+
+      /* PHOTOS */
+      .polaroids {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .polaroid {
+        width: 180px;
+        background: #fffaf3;
+        padding: 10px 10px 34px;
+        border-radius: 6px;
+        color: #7a2140;
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+        transition: transform 0.5s;
+        position: relative;
+      }
+      .polaroid:nth-child(1) {
+        transform: rotate(-4deg);
+      }
+      .polaroid:nth-child(2) {
+        transform: rotate(3deg);
+      }
+      .polaroid:nth-child(3) {
+        transform: rotate(-2deg);
+      }
+      .polaroid:hover {
+        transform: rotate(0) scale(1.09) translateY(-8px);
+        z-index: 5;
+      }
+      .polaroid .cadre {
+        height: 170px;
+        border-radius: 3px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #ffb3c6, #ffd28f, #ff4d79);
+        display: grid;
+        place-items: center;
+        font-size: 34px;
+      }
+      .polaroid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .polaroid span {
+        position: absolute;
+        bottom: 9px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-family: "Dancing Script", cursive;
+        font-size: 17px;
+      }
+      .ajout-photo {
+        display: block;
+        margin: 26px auto 0;
+        background: none;
+        border: 1px dashed rgba(255, 179, 198, 0.6);
+        color: var(--pink);
+        padding: 12px 24px;
+        border-radius: 30px;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: 13px;
+        letter-spacing: 1px;
+        transition: 0.4s;
+      }
+      .ajout-photo:hover {
+        background: rgba(255, 77, 121, 0.2);
+        color: #fff;
+        transform: scale(1.05);
+      }
+
+      /* DEMANDE */
+      #demande {
+        text-align: center;
+      }
+      .boutons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 44px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        border: none;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        padding: 16px 44px;
+        border-radius: 50px;
+        font-size: 17px;
+        transition: 0.35s;
+        position: relative;
+      }
+      .btn-oui {
+        background: linear-gradient(135deg, var(--rose), var(--gold));
+        color: #fff;
+        box-shadow: 0 12px 30px rgba(255, 77, 121, 0.5);
+        animation: bat3 1.8s ease-in-out infinite;
+      }
+      @keyframes bat3 {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        15% {
+          transform: scale(1.07);
+        }
+        30% {
+          transform: scale(1);
+        }
+        45% {
+          transform: scale(1.05);
+        }
+      }
+      .btn-oui:hover {
+        transform: scale(1.13);
+        box-shadow: 0 18px 46px rgba(255, 77, 121, 0.75);
+      }
+      .btn-non {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--cream);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      .message-esquive {
+        margin-top: 26px;
+        font-family: "Dancing Script", cursive;
+        font-size: 23px;
+        color: var(--gold);
+        min-height: 34px;
+      }
+
+      /* FINALE */
+      #finale {
+        text-align: center;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #finale .grand {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(34px, 8vw, 76px);
+        color: var(--gold);
+        text-shadow: 0 0 40px rgba(255, 210, 143, 0.6);
+        animation: bat2 2.4s infinite;
+      }
+      .pluie-mot {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 3;
+        overflow: hidden;
+      }
+      .mot {
+        position: absolute;
+        font-family: "Dancing Script", cursive;
+        color: rgba(255, 179, 198, 0.75);
+        white-space: nowrap;
+        animation: tombe linear forwards;
+      }
+      @keyframes tombe {
+        from {
+          transform: translateY(-10vh);
+        }
+        to {
+          transform: translateY(110vh);
+        }
+      }
+
+      /* curseur coeur */
+      .trace {
+        position: fixed;
+        pointer-events: none;
+        font-size: 20px;
+        z-index: 60;
+        animation: traceVole 0.95s ease-out forwards;
+      }
+      @keyframes traceVole {
+        0% {
+          transform: translate(-50%, -50%) scale(0.4);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-50%, -160%) scale(1.6);
+          opacity: 0;
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding: 60px 20px 90px;
+        font-size: 13px;
+        opacity: 0.65;
+        letter-spacing: 2px;
+      }
+
+      /* musique */
+      #musique {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        z-index: 70;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: #fff;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 19px;
+        backdrop-filter: blur(8px);
+        transition: 0.3s;
+      }
+      #musique:hover {
+        background: var(--rose);
+        transform: scale(1.12);
+      }
+      #musique.joue {
+        animation: bat 1.2s infinite;
+      }
+
+      @media (max-width: 600px) {
+        .btn {
+          padding: 14px 32px;
+          font-size: 15px;
+        }
+        .carte:nth-child(even) {
+          transform: none;
+        }
+        .polaroid {
+          width: 140px;
+        }
+        .polaroid .cadre {
+          height: 130px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <canvas id="coeurs"></canvas>
+
+    <button id="musique" title="Musique">🎵</button>
+
+    <!-- ===== INTRO ENVELOPPE ===== -->
+    <div id="intro">
+      <div class="txt-intro">Une lettre rien que pour toi…</div>
+      <div class="env" id="env">
+        <div class="lettre">Mon cœur déborde<br />ouvre-moi ❤</div>
+        <div class="corps"></div>
+        <div class="rabat"></div>
+        <div class="sceau">💌</div>
+      </div>
+      <div class="indice">Clique pour ouvrir</div>
+    </div>
+
+    <div class="contenu">
+      <!-- ===== HERO ===== -->
+      <section id="hero">
+        <div class="couronne">👑</div>
+        <h1>Andompitia<br />Lahatry Ny Avo Alida</h1>
+        <div class="tiako">Tiako ianao</div>
+        <div class="traduction">
+          « Je t'aime, plus que les mots ne peuvent le dire. »
+        </div>
+        <div class="defilement">↓ fais défiler, mon amour ↓</div>
+      </section>
+
+      <!-- ===== LETTRE ===== -->
+      <section id="lettre-sec">
+        <h2 class="titre revele">Ma déclaration</h2>
+        <p class="sous-titre revele">Écrite avec mon cœur, pour ton âme</p>
+        <div class="lettre-box revele">
+          <div id="texte-lettre"></div>
+          <div class="signature">— Celui qui t'aime ❤</div>
+        </div>
+      </section>
+
+      <!-- ===== RAISONS ===== -->
+      <section id="raisons">
+        <h2 class="titre revele">Pourquoi je t'aime</h2>
+        <p class="sous-titre revele">Et ce n'est même pas toute la liste…</p>
+        <div class="grille" id="grille"></div>
+      </section>
+
+      <!-- ===== CHIFFRES ===== -->
+      <section id="chiffres">
+        <h2 class="titre revele">Notre amour en chiffres</h2>
+        <p class="sous-titre revele">Depuis que nos chemins se sont croisés</p>
+        <div class="compteurs">
+          <div class="compteur revele">
+            <div class="n" data-cible="0" id="c-jours">0</div>
+            <div class="l">Jours d'amour</div>
+          </div>
+          <div class="compteur revele">
+            <div class="n" id="c-battements">0</div>
+            <div class="l">Battements de cœur</div>
+          </div>
+          <div class="compteur revele">
+            <div class="n" id="c-jeux">0</div>
+            <div class="l">« Je t'aime » pensés</div>
+          </div>
+          <div class="compteur revele">
+            <div class="n" id="c-vies">∞</div>
+            <div class="l">Vies avec toi</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TIMELINE ===== -->
+      <section id="histoire">
+        <h2 class="titre revele">Notre histoire</h2>
+        <p class="sous-titre revele">Chaque instant, un trésor</p>
+        <div class="timeline">
+          <div class="event revele">
+            <h4>Le premier regard ✨</h4>
+            <p>
+              Ce jour-là, le monde a ralenti. Je n'ai plus vu que toi, et mon
+              cœur a compris avant moi.
+            </p>
+          </div>
+          <div class="event revele">
+            <h4>Le premier rire 🌸</h4>
+            <p>
+              Ton rire est devenu ma chanson préférée, celle que je voudrais
+              entendre chaque matin.
+            </p>
+          </div>
+          <div class="event revele">
+            <h4>Les longues discussions 💬</h4>
+            <p>
+              Parler avec toi, c'est comme rentrer à la maison après un long
+              voyage.
+            </p>
+          </div>
+          <div class="event revele">
+            <h4>Aujourd'hui 💍</h4>
+            <p>
+              Et ce n'est qu'un début : je veux écrire la suite de notre
+              histoire avec toi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PHOTOS ===== -->
+      <section id="photos">
+        <h2 class="titre revele">Nos souvenirs</h2>
+        <p class="sous-titre revele">Ajoute nos plus belles photos 📸</p>
+        <div class="polaroids" id="polaroids">
+          <div class="polaroid revele">
+            <div class="cadre">🌹</div>
+            <span>Toi &amp; moi</span>
+          </div>
+          <div class="polaroid revele">
+            <div class="cadre">💖</div>
+            <span>Notre moment</span>
+          </div>
+          <div class="polaroid revele">
+            <div class="cadre">🌙</div>
+            <span>Pour toujours</span>
+          </div>
+        </div>
+        <button class="ajout-photo" id="btn-photo">+ Ajouter une photo</button>
+        <input type="file" accept="image/*" id="input-photo" hidden multiple />
+      </section>
+
+      <!-- ===== DEMANDE ===== -->
+      <section id="demande">
+        <h2 class="titre revele">Une dernière question…</h2>
+        <p class="sous-titre revele">
+          Andompitia Lahatry Ny Avo Alida, veux-tu rendre ma vie encore plus
+          belle ?
+        </p>
+        <div class="boutons">
+          <button class="btn btn-oui" id="btn-oui">
+            OUI, mille fois oui ❤
+          </button>
+          <button class="btn btn-non" id="btn-non">Non</button>
+        </div>
+        <div class="message-esquive" id="esquive"></div>
+      </section>
+
+      <!-- ===== FINALE ===== -->
+      <section id="finale">
+        <div class="grand">Je t'aime ❤</div>
+        <p class="sous-titre" style="margin-top: 18px">
+          Tiako ianao, Andompitia Lahatry Ny Avo Alida.<br />Pour aujourd'hui,
+          pour demain, pour toujours.
+        </p>
+        <div
+          style="
+            font-size: 52px;
+            margin-top: 26px;
+            animation: flotte 3s ease-in-out infinite;
+          "
+        >
+          💞
+        </div>
+      </section>
+
+      <footer>Fait avec tout mon cœur — pour toi, et seulement toi ❤</footer>
+    </div>
+
+    <script>
+      /* =========================================================
+   CONFIGURATION — modifie ici si tu veux
+   ========================================================= */
+      const CONFIG = {
+        nom: "Andompitia Lahatry Ny Avo Alida",
+        debut: "2024-01-01", // date de votre rencontre / premier message
+        signature: "Celui qui t'aime",
+      };
+
+      /* =========================================================
+   1. ENVELOPPE D'INTRODUCTION
+   ========================================================= */
+      const intro = document.getElementById("intro");
+      const env = document.getElementById("env");
+      env.addEventListener("click", () => {
+        env.classList.add("ouvert");
+        pluiePetales(window.innerWidth / 2, window.innerHeight / 2, 40);
+        setTimeout(() => {
+          intro.classList.add("ferme");
+          document.body.style.overflow = "auto";
+          lancerMusique();
+          demarrerLettre();
+        }, 1250);
+      });
+      document.body.style.overflow = "hidden";
+
+      /* =========================================================
+   2. CANVAS : CŒURS, PÉTALES, ÉTOILES
+   ========================================================= */
+      const cv = document.getElementById("coeurs");
+      const ctx = cv.getContext("2d");
+      let W,
+        H,
+        particules = [];
+      function resize() {
+        W = cv.width = innerWidth;
+        H = cv.height = innerHeight;
+      }
+      resize();
+      addEventListener("resize", resize);
+
+      const COULEURS = [
+        "#ff4d79",
+        "#ffb3c6",
+        "#ffd28f",
+        "#ffffff",
+        "#ff7fa4",
+        "#c9184a",
+      ];
+      const EMOJIS = ["❤", "💖", "💕", "🌹", "✨", "💐"];
+
+      function rnd(a, b) {
+        return a + Math.random() * (b - a);
+      }
+
+      function dessinerCoeur(x, y, t, rot, coul, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = coul;
+        ctx.shadowColor = coul;
+        ctx.shadowBlur = 14;
+        ctx.beginPath();
+        ctx.moveTo(0, t / 4);
+        ctx.bezierCurveTo(0, 0, -t / 2, 0, -t / 2, t / 4);
+        ctx.bezierCurveTo(-t / 2, t / 2, 0, t * 0.72, 0, t);
+        ctx.bezierCurveTo(0, t * 0.72, t / 2, t / 2, t / 2, t / 4);
+        ctx.bezierCurveTo(t / 2, 0, 0, 0, 0, t / 4);
+        ctx.fill();
+        ctx.restore();
+      }
+      function dessinerPetal(x, y, t, rot, coul, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = coul;
+        ctx.shadowColor = coul;
+        ctx.shadowBlur = 10;
+        ctx.beginPath();
+        ctx.ellipse(0, 0, t / 2, t / 2.4, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      function dessinerEmoji(x, y, t, coul, alpha) {
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.font = t + "px serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(coul, x, y);
+        ctx.restore();
+      }
+
+      function nouvelleParticule(type, x, y, opts = {}) {
+        return Object.assign(
+          {
+            type:
+              type ||
+              (Math.random() < 0.65
+                ? "coeur"
+                : Math.random() < 0.5
+                  ? "petale"
+                  : "emoji"),
+            x: x ?? rnd(0, W),
+            y: y ?? rnd(-H * 0.2, H),
+            t: rnd(9, 26),
+            vy: rnd(0.25, 1.1),
+            vx: rnd(-0.4, 0.4),
+            rot: rnd(0, Math.PI * 2),
+            vr: rnd(-0.02, 0.02),
+            coul: COULEURS[(Math.random() * COULEURS.length) | 0],
+            glyphe: EMOJIS[(Math.random() * EMOJIS.length) | 0],
+            alpha: rnd(0.35, 0.9),
+            vie: rnd(400, 900),
+            osc: rnd(0, Math.PI * 2),
+          },
+          opts,
+        );
+      }
+
+      for (let i = 0; i < 70; i++) particules.push(nouvelleParticule());
+
+      function animer() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = particules.length - 1; i >= 0; i--) {
+          const p = particules[i];
+          p.osc += 0.02;
+          p.x += p.vx + Math.sin(p.osc) * 0.5;
+          p.y += p.vy;
+          p.rot += p.vr;
+          p.vie--;
+          if (p.alpha > 0.02 && p.vie < 90) p.alpha -= 0.01;
+          if (p.type === "coeur")
+            dessinerCoeur(p.x, p.y, p.t, p.rot, p.coul, p.alpha);
+          else if (p.type === "petale")
+            dessinerPetal(p.x, p.y, p.t, p.rot, p.coul, p.alpha);
+          else dessinerEmoji(p.x, p.y, p.t, p.glyphe, p.alpha);
+          if (p.y > H + 40 || p.vie <= 0 || p.alpha <= 0) {
+            particules[i] = nouvelleParticule(null, rnd(0, W), rnd(-80, -10));
+          }
+        }
+        requestAnimationFrame(animer);
+      }
+      animer();
+
+      /* Explosion de cœurs (clic, OUI, etc.) */
+      function explosion(x, y, n = 36) {
+        for (let i = 0; i < n; i++) {
+          const a = Math.random() * Math.PI * 2,
+            v = rnd(2, 9);
+          particules.push(
+            nouvelleParticule("coeur", x, y, {
+              vx: Math.cos(a) * v,
+              vy: Math.sin(a) * v - 2,
+              t: rnd(10, 26),
+              alpha: 1,
+              vie: rnd(60, 140),
+              vr: rnd(-0.15, 0.15),
+            }),
+          );
+        }
+        for (let i = 0; i < 10; i++) {
+          particules.push(
+            nouvelleParticule("emoji", x + rnd(-40, 40), y + rnd(-40, 40), {
+              vy: rnd(-2.2, -0.6),
+              t: rnd(16, 32),
+              alpha: 1,
+              vie: rnd(70, 130),
+            }),
+          );
+        }
+      }
+      function pluiePetales(x, y, n = 30) {
+        for (let i = 0; i < n; i++) {
+          particules.push(
+            nouvelleParticule("petale", x + rnd(-140, 140), y + rnd(-60, 20), {
+              vx: rnd(-1.4, 1.4),
+              vy: rnd(-3.5, -1),
+              t: rnd(8, 18),
+              alpha: 1,
+              vie: rnd(120, 220),
+            }),
+          );
+        }
+      }
+      addEventListener("click", (e) => {
+        if (!e.target.closest("button")) explosion(e.clientX, e.clientY, 16);
+      });
+      addEventListener(
+        "touchstart",
+        (e) => {
+          const t = e.touches[0];
+          explosion(t.clientX, t.clientY, 14);
+        },
+        { passive: true },
+      );
+
+      /* =========================================================
+   3. TRACE DE CŒURS SOUS LE CURSEUR
+   ========================================================= */
+      let dernier = 0;
+      addEventListener("mousemove", (e) => {
+        const now = Date.now();
+        if (now - dernier < 110) return;
+        dernier = now;
+        const s = document.createElement("div");
+        s.className = "trace";
+        s.textContent = ["❤", "💕", "✨", "💖"][(Math.random() * 4) | 0];
+        s.style.left = e.clientX + "px";
+        s.style.top = e.clientY + "px";
+        document.body.appendChild(s);
+        setTimeout(() => s.remove(), 1000);
+      });
+
+      /* =========================================================
+   4. LETTRE : EFFET MACHINE À ÉCRIRE
+   ========================================================= */
+      const texteLettre = document.getElementById("texte-lettre");
+      const paragraphes = [
+        "Andompitia Lahatry Ny Avo Alida,",
+        "Il y a des mots que le cœur prononce bien avant que la bouche ne les apprenne. Aujourd'hui, j'ai enfin trouvé le courage de te les écrire.",
+        "Depuis que tu existes dans ma vie, les jours ont changé de couleur. Ce qui était gris est devenu doux, ce qui était ordinaire est devenu précieux, et ce qui était silencieux s'est mis à chanter.",
+        "J'aime la façon dont ton nom résonne dans ma tête. J'aime l'idée que quelque part dans ce monde immense, il existe une personne comme toi — et que cette personne, c'est toi que j'ai rencontrée.",
+        "Je ne promets pas d'être parfait. Je promets d'être là : dans tes rires, dans tes doutes, dans tes matins pressés et dans tes nuits trop longues.",
+        "Si tu me le permets, je veux être celui qui te protège, celui qui t'écoute, celui qui rentre à la maison et te trouve.",
+        "Tiako ianao. Je t'aime. Et ce n'est pas une phrase : c'est une vérité que je veux te répéter toute ma vie.",
+      ];
+      let demarreLettre = false;
+      function demarrerLettre() {
+        if (!demarreLettre) {
+          demarreLettre = true;
+          ecrire();
+        }
+      }
+
+      async function ecrire() {
+        for (const ph of paragraphes) {
+          const el = document.createElement("p");
+          texteLettre.appendChild(el);
+          const span = document.createElement("span");
+          const cur = document.createElement("span");
+          cur.className = "curseur";
+          el.append(span, cur);
+          for (let i = 0; i < ph.length; i++) {
+            span.textContent += ph[i];
+            await new Promise((r) => setTimeout(r, 22));
+          }
+          cur.remove();
+          await new Promise((r) => setTimeout(r, 220));
+        }
+      }
+
+      /* =========================================================
+   5. RAISONS (générées)
+   ========================================================= */
+      const raisons = [
+        [
+          "✨",
+          "Ton sourire",
+          "Il éclaire mes journées les plus sombres et réchauffe tout ce qu'il touche.",
+        ],
+        [
+          "🌹",
+          "Ta douceur",
+          "Tu as cette façon d'être présente qui calme toutes mes tempêtes.",
+        ],
+        [
+          "🌙",
+          "Ta voix",
+          "J'aimerais l'entendre chaque soir avant de dormir, encore et encore.",
+        ],
+        [
+          "💫",
+          "Tes yeux",
+          "J'y ai vu un endroit où j'ai envie de passer le reste de ma vie.",
+        ],
+        [
+          "🍃",
+          "Ta patience",
+          "Tu m'acceptes tel que je suis, et tu me donnes envie d'être meilleur.",
+        ],
+        [
+          "🔥",
+          "Ta force",
+          "Tu avances, tu rêves, tu te bats. Et je suis fier de te connaître.",
+        ],
+        [
+          "🎶",
+          "Tes rires",
+          "C'est la plus belle musique que mes oreilles aient jamais portée.",
+        ],
+        [
+          "🕊️",
+          "Ton cœur",
+          "Il est grand, généreux, sincère. Il donne envie d'aimer plus fort.",
+        ],
+      ];
+      const grille = document.getElementById("grille");
+      raisons.forEach(([ico, titre, txt], i) => {
+        const d = document.createElement("div");
+        d.className = "carte revele";
+        d.style.transitionDelay = i * 0.08 + "s";
+        d.innerHTML = `<span class="num">${String(i + 1).padStart(2, "0")}</span>
+    <span class="ico">${ico}</span><h3>${titre}</h3><p>${txt}</p>`;
+        grille.appendChild(d);
+      });
+
+      /* =========================================================
+   6. APPARITION AU SCROLL
+   ========================================================= */
+      const io = new IntersectionObserver(
+        (es) => {
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("vu");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.18 },
+      );
+      document.querySelectorAll(".revele").forEach((el) => io.observe(el));
+
+      /* =========================================================
+   7. COMPTEURS
+   ========================================================= */
+      const debut = new Date(CONFIG.debut);
+      const jours = Math.max(1, Math.floor((Date.now() - debut) / 86400000));
+      function animerCompteur(el, cible, suffix = "") {
+        let v = 0;
+        const pas = Math.max(1, cible / 90);
+        const t = setInterval(() => {
+          v += pas;
+          if (v >= cible) {
+            v = cible;
+            clearInterval(t);
+          }
+          el.textContent = Math.floor(v).toLocaleString("fr-FR") + suffix;
+        }, 22);
+      }
+      const cJours = document.getElementById("c-jours");
+      const cBatt = document.getElementById("c-battements");
+      const cJeux = document.getElementById("c-jeux");
+      const ioC = new IntersectionObserver(
+        (es) => {
+          if (es[0].isIntersecting) {
+            animerCompteur(cJours, jours);
+            animerCompteur(cBatt, jours * 24 * 60 * 70);
+            animerCompteur(cJeux, jours * 37);
+            ioC.disconnect();
+          }
+        },
+        { threshold: 0.4 },
+      );
+      ioC.observe(cJours);
+
+      /* =========================================================
+   8. PHOTOS
+   ========================================================= */
+      const inputPhoto = document.getElementById("input-photo");
+      document
+        .getElementById("btn-photo")
+        .addEventListener("click", () => inputPhoto.click());
+      inputPhoto.addEventListener("change", (e) => {
+        [...e.target.files].forEach((f) => {
+          const r = new FileReader();
+          r.onload = (ev) => {
+            const p = document.createElement("div");
+            p.className = "polaroid";
+            p.innerHTML = `<div class="cadre"><img src="${ev.target.result}" alt="souvenir"></div><span>❤</span>`;
+            p.style.animation = "none";
+            document.getElementById("polaroids").appendChild(p);
+            explosion(innerWidth / 2, innerHeight / 2, 22);
+          };
+          r.readAsDataURL(f);
+        });
+      });
+
+      /* =========================================================
+   9. BOUTON « NON » QUI S'ENFuit
+   ========================================================= */
+      const btnNon = document.getElementById("btn-non");
+      const esquive = document.getElementById("esquive");
+      const phrases = [
+        "Tu es sûre ? Regarde encore… 👀",
+        "Ce bouton n'a aucune chance 😏",
+        "Mon cœur ne te laissera pas partir ❤",
+        "Réessaie, je t'en prie… 🌹",
+        "Il n'y a qu'une bonne réponse, tu sais 😘",
+        "Même le bouton a peur de te dire non 😄",
+      ];
+      let idx = 0,
+        fuite = 0;
+      function enfuir() {
+        fuite++;
+        const x = rnd(-260, 260),
+          y = rnd(-140, 140);
+        btnNon.style.transform = `translate(${x}px,${y}px) scale(${Math.max(0.55, 1 - fuite * 0.09)})`;
+        btnNon.textContent =
+          ["Non", "Hmm…", "Peut-être", "Oui ?", "OUI ❤"][Math.min(4, fuite)] ||
+          "OUI ❤";
+        esquive.textContent = phrases[idx++ % phrases.length];
+        if (fuite >= 5) {
+          btnNon.textContent = "Bon… OUI ❤";
+          btnNon.style.background = "linear-gradient(135deg,#ff4d79,#ffd28f)";
+        }
+      }
+      btnNon.addEventListener("mouseenter", enfuir);
+      btnNon.addEventListener("click", (e) => {
+        e.preventDefault();
+        enfuir();
+      });
+
+      /* =========================================================
+   10. LE GRAND OUI — FEU D'ARTIFICE + PLUIE DE MOTS
+   ========================================================= */
+      const btnOui = document.getElementById("btn-oui");
+      btnOui.addEventListener("click", (e) => {
+        e.stopPropagation();
+        btnNon.style.display = "none";
+        esquive.textContent = "";
+        document
+          .getElementById("demande")
+          .querySelector(".sous-titre").innerHTML =
+          "Tu as dit OUI… mon cœur n'avait jamais battu aussi fort ❤";
+        btnOui.textContent = "Je t'aime pour toujours ❤";
+
+        const cx = innerWidth / 2,
+          cy = innerHeight / 2;
+        let tirs = 0;
+        const feu = setInterval(() => {
+          explosion(rnd(cx - 380, cx + 380), rnd(cy - 260, cy + 160), 46);
+          if (++tirs > 12) clearInterval(feu);
+        }, 320);
+
+        const pluie = document.createElement("div");
+        pluie.className = "pluie-mot";
+        document.body.appendChild(pluie);
+        const mots = [
+          "Je t'aime",
+          "Tiako ianao",
+          "❤",
+          "Mon amour",
+          "Pour toujours",
+          "Andompitia",
+          "💖",
+          "Rien que toi",
+        ];
+        const tomber = setInterval(() => {
+          const m = document.createElement("div");
+          m.className = "mot";
+          m.textContent = mots[(Math.random() * mots.length) | 0];
+          m.style.left = rnd(0, 100) + "vw";
+          m.style.fontSize = rnd(18, 44) + "px";
+          m.style.animationDuration = rnd(5, 10) + "s";
+          pluie.appendChild(m);
+          setTimeout(() => m.remove(), 11000);
+        }, 220);
+        setTimeout(() => clearInterval(tomber), 24000);
+      });
+
+      /* =========================================================
+   11. MUSIQUE DOUCE (WebAudio, aucun fichier externe)
+   ========================================================= */
+      let audioCtx = null,
+        musiqueOn = false,
+        timer = null;
+      const btnMusique = document.getElementById("musique");
+      const MELODIE = [
+        523.25, 587.33, 659.25, 783.99, 659.25, 587.33, 523.25, 493.88, 523.25,
+        587.33, 659.25, 698.46, 659.25, 587.33, 523.25,
+      ];
+      function note(freq, t, dur, gain = 0.06) {
+        const o = audioCtx.createOscillator(),
+          g = audioCtx.createGain();
+        o.type = "sine";
+        o.frequency.value = freq;
+        o.connect(g);
+        g.connect(audioCtx.destination);
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(gain, t + 0.08);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+        o.start(t);
+        o.stop(t + dur + 0.05);
+      }
+      function boucleMusique() {
+        const t0 = audioCtx.currentTime + 0.1;
+        MELODIE.forEach((f, i) => note(f, t0 + i * 0.42, 0.6));
+        [261.63, 329.63, 392.0].forEach((f) => note(f, t0, 6.4, 0.025));
+        timer = setTimeout(boucleMusique, MELODIE.length * 420 + 900);
+      }
+      function lancerMusique() {
+        if (musiqueOn) return;
+        try {
+          audioCtx =
+            audioCtx ||
+            new (window.AudioContext || window.webkitAudioContext)();
+          audioCtx.resume();
+          musiqueOn = true;
+          btnMusique.classList.add("joue");
+          btnMusique.textContent = "🎶";
+          boucleMusique();
+        } catch (err) {
+          /* audio indisponible */
+        }
+      }
+      btnMusique.addEventListener("click", () => {
+        if (musiqueOn) {
+          musiqueOn = false;
+          clearTimeout(timer);
+          btnMusique.classList.remove("joue");
+          btnMusique.textContent = "🔇";
+        } else lancerMusique();
+      });
+    </script>
+  </body>
+</html>
